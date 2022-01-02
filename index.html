@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+function x(){
+var rutVal=document.getElementById('Rut').value; 
+var arr = rutVal.split('');
+var comprobar=[2,9,8,7,6,3,4];
+var sizeR= (arr.length)-1;
+var Sdig= arr.splice(0,sizeR);
+var Dig= arr.splice(Sdig,sizeR);
+var conta=0;
+var n=0;
+
+while(conta<sizeR){
+var l= ((parseInt(Sdig[conta]))*(comprobar[conta]));
+Y= (n+=l)%10;
+conta++;
+}
+var xyz=10-Y;
+if (Dig!=xyz){
+  alert('verifica la c\u00E9dula');
+}
+console.log(Sdig);
+console.log(Dig);
+console.log(xyz);
+}
+	</script>
+</head>
+<body>
+	<input id ="Rut" type="" name="" value="">
+	<button onclick="x();">Enviar</button>
+
+</body>
+</html>
