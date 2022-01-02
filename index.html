@@ -5,8 +5,11 @@
 	<script type="text/javascript">
 
 function x(){
-var rutVal=document.getElementById('Rut').value; 
+var rutVal=document.getElementById('Rut').value;	
 var arr = rutVal.split('');
+if(rutVal.lenght==7){
+arr.unshift(0);	
+}
 var comprobar=[2,9,8,7,6,3,4];
 var sizeR= (arr.length)-1;
 var Sdig= arr.splice(0,sizeR);
